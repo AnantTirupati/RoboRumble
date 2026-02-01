@@ -7,7 +7,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { Modal } from "@/components/ui/modal";
-import { Trophy, Users, Clock, Info, Shield, Zap, Cpu, Code } from "lucide-react";
+import { Trophy, Users, Clock, Info, Shield, Zap, Cpu, Code, Bot, Gamepad2, Mic, Rocket } from "lucide-react";
 import { BiFootball } from "react-icons/bi";
 
 interface EventData {
@@ -110,28 +110,73 @@ const events: EventData[] = [
         ]
     },
     {
-        id: "coding-contest",
-        title: "Algorthmic Arena",
-        category: "Coding",
-        icon: Code,
-        desc: "Competitive programming contest. Solve complex algorithmic challenges.",
-        teamSize: "Individual",
-        prize: "₹10,000",
+        id: "pick-and-drop",
+        title: "Pick & Drop Robotics",
+        category: "Robotics",
+        icon: Bot,
+        desc: "A task-based challenge where robots must accurately pick objects",
+        teamSize: "3-5 Members",
+        prize: "₹20,000 Pool",
         rules: [
-            "Each team must consist of 3–5 members.",
-            "All team members must belong to the same school, college, or institute.",
-            "Only one robot per team is allowed.",
-            "The robot may be manual (wired or wireless) or autonomous.",
-            "Manual handling of the robot during the match is strictly prohibited.",
-            "Participants must carry valid institute ID cards during the event.",
-            "Any form of misconduct or malpractice will lead to immediate disqualification.",
-            "The decision of the judges shall be final and binding.",
-            "The maximum allowed robot dimensions are 30 cm × 30 cm × 30 cm (L × W × H).",
-            "The maximum allowed weight of the robot is 5 kg, including the battery.",
-            "Robots must be equipped with a picking mechanism such as a gripper, claw, magnet, arm, or suction mechanism.",
-            "Failure to comply with any of the above rules will result in disqualification."
+            "3-5 members per team from the same institute (ID cards required).",
+            "One robot per team: Manual (wired/wireless) or Autonomous.",
+            "Max Dimensions: 30cm x 30cm x 30cm. Max Weight: 5kg.",
+            "Must have a picking mechanism (Gripper, Claw, Magnet, Arm, etc.).",
+            "No manual handling during the match.",
+            "Prizes: 1st ₹10k, 2nd ₹6k, 3rd ₹4k.",
+            "Any misconduct leads to disqualification."
         ]
-    }
+    },
+    {
+        id: "e-sports",
+        title: "E-SPORTS",
+        category: "Gaming",
+        icon: Gamepad2,
+        desc: "A competitive digital gaming arena where players showcase strategy, reflexes, and teamwork in high-intensity esports battles.",
+        teamSize: "4 Members (Squad)",
+        prize: "₹10,000 Pool",
+        rules: [
+            "Squad Mode (4 Main Players).",
+            "Must be students (Schools/Colleges/Universities).",
+            "Register with accurate IGN, Real Name, and Character ID.",
+            "Same registered IDs must be used throughout the tournament.",
+            "Mobile phones only. No iPads/Tablets/Emulators/Triggers.",
+            "Prizes: 1st ₹6000, Runner Up ₹4000."
+        ]
+    },
+    {
+        id: "defence-talk",
+        title: "Defence Talk",
+        category: "Seminar",
+        icon: Mic,
+        desc: "An informative session exploring modern defense technologies, strategies, and career opportunities.",
+        teamSize: "Open to All",
+        prize: "Certificates",
+        rules: [
+            "Open to all registered participants.",
+            "Participants must maintain discipline and decorum.",
+            "Questions may be asked during Q&A only.",
+            "No recording/photography without permission.",
+            "Follow instructions from organizers/speakers."
+        ]
+    },
+    {
+        id: "defence-expo",
+        title: "Defence Expo",
+        category: "Exhibition",
+        icon: Rocket,
+        desc: "An exhibition showcasing defense technologies, equipment, innovations, and student-led defense projects.",
+        teamSize: "Open to Visitors",
+        prize: "Certificates",
+        rules: [
+            "Open to all registered participants and visitors.",
+            "Exhibits must be set up within allotted time/space.",
+            "Ensure safe handling of displayed models.",
+            "Misconduct or damage leads to strict action.",
+            "Organizers’ instructions must be followed."
+        ]
+    },
+
 ];
 
 export default function EventsPage() {

@@ -9,26 +9,27 @@ import { Clock, MapPin } from "lucide-react";
 export default function SchedulePage() {
     const schedule = [
         {
-            day: "Day 1 - March 15",
+            day: "Day 1 - March 9",
             events: [
-                { time: "09:00 AM", title: "Inauguration Ceremony", venue: "Main Auditorium", type: "General" },
-                { time: "10:30 AM", title: "Robo Wars (Round 1)", venue: "Arena A", type: "Competition" },
-                { time: "11:00 AM", title: "Keynote: Future of AI", venue: "Seminar Hall", type: "Talk" },
-                { time: "01:00 PM", title: "Lunch Break", venue: "Food Court", type: "Break" },
-                { time: "02:00 PM", title: "Hackathon Begins", venue: "Lab Complex", type: "Competition" },
-                { time: "03:00 PM", title: "Drone Racing Qualifiers", venue: "Sports Ground", type: "Competition" },
-                { time: "05:00 PM", title: "Tech Quiz", venue: "Lecture Hall 4", type: "Competition" },
+                { time: "10:00 AM", title: "Inauguration Ceremony", venue: "Innovation Cell CSJMU", type: "General" },
+                { time: "11:00 AM", title: "Line Following Bot", venue: "Innovation Cell CSJMU", type: "Competition" },
+                { time: "03:00 PM", title: "Project Expo", venue: "Innovation Cell CSJMU", type: "Exhibition" },
             ]
         },
         {
-            day: "Day 2 - March 16",
+            day: "Day 2 - March 10",
             events: [
-                { time: "09:00 AM", title: "Line Follower Finals", venue: "Arena B", type: "Competition" },
-                { time: "10:00 AM", title: "Project Expo", venue: "Exhibition Center", type: "Exhibition" },
-                { time: "11:00 AM", title: "Robo Wars (Finals)", venue: "Arena A", type: "Competition" },
-                { time: "02:00 PM", title: "Hackathon Judging", venue: "Lab Complex", type: "Judging" },
-                { time: "04:00 PM", title: "Drone Racing Finals", venue: "Sports Ground", type: "Competition" },
-                { time: "06:00 PM", title: "Closing Ceremony & Prize Distribution", venue: "Main Auditorium", type: "General" },
+                { time: "10:00 AM", title: "Robo Race", venue: "Innovation Cell CSJMU", type: "Competition" },
+                { time: "12:00 PM", title: "Robo Wars", venue: "UIET CSJMU", type: "Competition" },
+                { time: "03:00 PM", title: "Robo Soccer", venue: "UIET CSJMU", type: "Competition" },
+            ]
+        },
+        {
+            day: "Day 3 - March 11",
+            events: [
+                { time: "10:00 AM", title: "Esports Finals", venue: "UIET CSJMU", type: "Competition" },
+                { time: "01:00 PM", title: "Defence Talk", venue: "UIET CSJMU", type: "Seminar" },
+                { time: "03:00 PM", title: "Defence Expo", venue: "UIET CSJMU", type: "Exhibition" },
             ]
         }
     ];
@@ -71,8 +72,8 @@ export default function SchedulePage() {
                                             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-2">
                                                 <h3 className="text-xl font-bold text-white">{event.title}</h3>
                                                 <span className={`text-xs px-3 py-1 rounded-full border ${event.type === 'Competition' ? 'border-neon-purple text-neon-purple' :
-                                                        event.type === 'General' ? 'border-neon-cyan text-neon-cyan' :
-                                                            'border-gray-500 text-gray-400'
+                                                    event.type === 'General' ? 'border-neon-cyan text-neon-cyan' :
+                                                        'border-gray-500 text-gray-400'
                                                     }`}>
                                                     {event.type}
                                                 </span>

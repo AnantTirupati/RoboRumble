@@ -5,18 +5,27 @@ import { Github, Linkedin, Mail, User } from "lucide-react";
 import Image from "next/image";
 
 export default function TeamPage() {
+    const chiefPatron = {
+        name: "Prof. Vinay Kumar Pathak",
+        role: "Hon'ble Vice Chancellor",
+        dept: "CSJMU"
+    };
+
+    const patrons = [
+        { name: "Dr. Shilpa Deshpande Kaistha", role: "Dean, Innovation Foundation", dept: "CSJMU" },
+        { name: "Mr. Divyansh Shukla", role: "CEO, Innovation Foundation", dept: "CSJMU" },
+        { name: "Dr. Alok Kumar", role: "Director", dept: "UIET, CSJMU" },
+    ];
+
     const faculty = [
-        { name: "Dr. A. Sharma", role: "Faculty Advisor", dept: "Robotics & Automation" },
-        { name: "Prof. K. Verma", role: "Event Coordinator", dept: "Computer Science" },
+        { name: "Dr. Ajay Tiwari", role: "Asst. Professor", dept: "UIET, CSJMU" },
+        { name: "Er. Mohd Shah Alam", role: "Asst. Professor", dept: "UIET, CSJMU" },
     ];
 
     const students = [
-        { name: "Rohan Das", role: "Lead Organizer", dept: "Final Year, ECE" },
-        { name: "Priya Singh", role: "Technical Head", dept: "Third Year, CSE" },
-        { name: "Amit Kumar", role: "Sponsorship Lead", dept: "Final Year, ME" },
-        { name: "Sneha Gupta", role: "Creative Director", dept: "Third Year, IT" },
-        { name: "Vikram Malhotra", role: "Web Developer", dept: "Second Year, CSE" },
-        { name: "Anjali Rao", role: "Public Relations", dept: "Third Year, ECE" },
+        { name: "Mr. Raju Ranjan Yadav", role: "Student Co-ordinator", dept: "ROBO RUMBLE" },
+        { name: "Mr. Devanshu Verma", role: "Student Co-ordinator", dept: "ROBO RUMBLE" },
+        { name: "Qaaid Iqbal Badri", role: "Student Co-ordinator", dept: "ROBO RUMBLE" },
     ];
 
     return (
@@ -33,16 +42,60 @@ export default function TeamPage() {
                     </p>
                 </Section>
 
-                {/* Faculty Section */}
+                {/* Chief Patron Section */}
                 <div className="mb-20">
                     <Section>
-                        <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-neon-cyan pl-4">
-                            Faculty Coordinators
+                        <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-neon-cyan pl-4 text-center">
+                            Chief Patron
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="flex justify-center">
+                            <div className="flex flex-col items-center gap-4 bg-navy-light p-8 rounded-xl border border-white/5 hover:border-neon-cyan/50 transition-all max-w-md w-full">
+                                <div className="w-32 h-32 rounded-full bg-navy border-2 border-neon-cyan flex items-center justify-center text-neon-cyan shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                                    <User size={64} />
+                                </div>
+                                <div className="text-center">
+                                    <h3 className="text-2xl font-bold text-white mb-2">{chiefPatron.name}</h3>
+                                    <p className="text-neon-cyan font-bold">{chiefPatron.role}</p>
+                                    <p className="text-gray-400">{chiefPatron.dept}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </Section>
+                </div>
+
+                {/* Patrons Section */}
+                <div className="mb-20">
+                    <Section delay={0.1}>
+                        <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-neon-purple pl-4 text-center">
+                            Patrons
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            {patrons.map((member, i) => (
+                                <div key={i} className="flex flex-col items-center gap-4 bg-navy-light p-6 rounded-xl border border-white/5 hover:border-neon-purple/30 transition-all">
+                                    <div className="w-24 h-24 rounded-full bg-navy border border-gray-700 flex items-center justify-center text-gray-500">
+                                        <User size={40} />
+                                    </div>
+                                    <div className="text-center">
+                                        <h3 className="text-xl font-bold text-white">{member.name}</h3>
+                                        <p className="text-neon-purple text-sm font-bold">{member.role}</p>
+                                        <p className="text-gray-500 text-xs">{member.dept}</p>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                    </Section>
+                </div>
+
+                {/* Faculty Section */}
+                <div className="mb-20">
+                    <Section delay={0.2}>
+                        <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-neon-cyan pl-4">
+                            Faculty Co-ordinators
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                             {faculty.map((member, i) => (
                                 <div key={i} className="flex items-center gap-4 bg-navy-light p-6 rounded-xl border border-white/5 hover:border-neon-cyan/30 transition-all">
-                                    <div className="w-16 h-16 rounded-full bg-navy border border-gray-700 flex items-center justify-center text-gray-500">
+                                    <div className="w-20 h-20 rounded-full bg-navy border border-gray-700 flex items-center justify-center text-gray-500">
                                         <User size={32} />
                                     </div>
                                     <div>
@@ -58,11 +111,11 @@ export default function TeamPage() {
 
                 {/* Student Section */}
                 <div>
-                    <Section delay={0.2}>
+                    <Section delay={0.3}>
                         <h2 className="text-2xl font-bold text-white mb-8 border-l-4 border-neon-purple pl-4">
-                            Student Core Team
+                            Student Co-ordinators
                         </h2>
-                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             {students.map((member, i) => (
                                 <div key={i} className="group bg-navy-light p-6 rounded-xl border border-white/5 hover:border-neon-purple/50 transition-all hover:-translate-y-1">
                                     <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gradient-to-br from-navy to-black border-2 border-white/10 flex items-center justify-center text-gray-600 group-hover:border-neon-purple transition-colors">
@@ -75,7 +128,6 @@ export default function TeamPage() {
                                     </div>
                                     <div className="flex justify-center gap-4 mt-6 opacity-0 group-hover:opacity-100 transition-opacity">
                                         <a href="#" className="text-gray-400 hover:text-white"><Linkedin size={18} /></a>
-                                        <a href="#" className="text-gray-400 hover:text-white"><Github size={18} /></a>
                                         <a href="#" className="text-gray-400 hover:text-white"><Mail size={18} /></a>
                                     </div>
                                 </div>
