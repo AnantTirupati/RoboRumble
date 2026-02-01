@@ -32,8 +32,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-white font-medium mb-1">Email Us</h3>
-                                        <p className="text-gray-400">info@roborumble.edu</p>
-                                        <p className="text-gray-400">support@roborumble.edu</p>
+                                        <p className="text-gray-400">uiettechfest@gmail.com</p>
+                                        {/* <p className="text-gray-400">support@roborumble.edu</p> */}
                                     </div>
                                 </div>
 
@@ -43,8 +43,8 @@ export default function ContactPage() {
                                     </div>
                                     <div>
                                         <h3 className="text-white font-medium mb-1">Call Us</h3>
-                                        <p className="text-gray-400">+91 98765 43210 (Rohan - Org)</p>
-                                        <p className="text-gray-400">+91 98765 43211 (Priya - Tech)</p>
+                                        <p className="text-gray-400">+91 99588 68979 (Nikhil Shines)</p>
+                                        
                                     </div>
                                 </div>
 
@@ -55,8 +55,8 @@ export default function ContactPage() {
                                     <div>
                                         <h3 className="text-white font-medium mb-1">Visit Us</h3>
                                         <p className="text-gray-400">
-                                            Engineering Block B, Tech Institute Campus,<br />
-                                            Main Avenue, Mumbai, India - 400001
+                                            UIET, CSJM University Campus,<br />
+                                            Kalyanpur, Kanpur, Uttar Pradesh - 208024
                                         </p>
                                     </div>
                                 </div>

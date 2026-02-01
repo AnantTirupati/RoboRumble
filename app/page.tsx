@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, Calendar, MapPin } from "lucide-react";
+import { ArrowRight, Calendar, MapPin, Download } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ParticleBackground } from "@/components/ui/particle-background";
@@ -40,6 +40,12 @@ export default function Home() {
                   Explore Events
                 </Button>
               </Link>
+              <a href="/brochureroborumble3.o.pdf" download="RoboRumble_Brochure.pdf">
+                <Button size="lg" variant="outline" className="w-full md:w-auto border-neon-purple text-neon-purple hover:bg-neon-purple/10">
+                  <Download size={20} className="mr-2" />
+                  Download Brochure
+                </Button>
+              </a>
             </div>
 
             <div className="flex flex-wrap justify-center gap-8 text-gray-400 mb-12">

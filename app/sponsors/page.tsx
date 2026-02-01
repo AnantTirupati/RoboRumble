@@ -2,24 +2,16 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { Section } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 export default function SponsorsPage() {
-    const sponsors = [
-        {
-            tier: "Title Sponsor",
-            color: "text-neon-cyan border-neon-cyan shadow-[0_0_30px_rgba(100,255,218,0.2)]",
-            logos: ["TechCorp Global"]
-        },
-        {
-            tier: "Gold Sponsors",
-            color: "text-yellow-400 border-yellow-400",
-            logos: ["DevSolutions", "InnovateX", "Future Systems"]
-        },
-        {
-            tier: "Silver Sponsors",
-            color: "text-gray-300 border-gray-400",
-            logos: ["CyberNet", "RoboTech Labs", "CloudScale", "DataFlow"]
-        }
+    const pastSponsors = [
+        { name: "Nkosh", image: "/Nkosh.png" },
+        { name: "RedBull", image: "/redbull2.png" },
+        { name: "Dominos", image: "/dominos.png" },
+        { name: "DailyWash", image: "/dailywash.jpg" },
+        { name: "CSJMIF", image: "/CSJMIF.jpg" },
+        { name: "Sahara", image: "/sahara.jpg" },
     ];
 
     return (
@@ -36,28 +28,28 @@ export default function SponsorsPage() {
                     </p>
                 </Section>
 
-                <div className="space-y-16">
-                    {sponsors.map((tier, i) => (
-                        <Section key={i} delay={i * 0.2}>
-                            <h2 className={`text-2xl font-bold text-center mb-10 uppercase tracking-widest ${tier.tier === 'Title Sponsor' ? 'text-neon-cyan' : 'text-white'}`}>
-                                {tier.tier}
-                            </h2>
+                <div className="mb-20">
+                    <Section delay={0.2}>
+                        <h2 className="text-2xl font-bold text-center mb-12 uppercase tracking-widest text-neon-cyan">
+                            Past Sponsors
+                        </h2>
 
-                            <div className="flex flex-wrap justify-center gap-8 md:gap-12">
-                                {tier.logos.map((logo, idx) => (
-                                    <div
-                                        key={idx}
-                                        className={`w-64 h-32 flex items-center justify-center rounded-xl bg-navy-light/50 border-2 transition-all hover:scale-105 ${tier.color}`}
-                                    >
-                                        {/* Placeholder for Logo */}
-                                        <span className={`text-xl font-bold ${tier.tier === 'Title Sponsor' ? 'text-2xl' : ''}`}>
-                                            {logo}
-                                        </span>
-                                    </div>
-                                ))}
-                            </div>
-                        </Section>
-                    ))}
+                        <div className="flex flex-wrap justify-center gap-8 md:gap-12">
+                            {pastSponsors.map((sponsor, idx) => (
+                                <div
+                                    key={idx}
+                                    className="relative w-64 h-32 flex items-center justify-center rounded-xl bg-white/5 border border-white/10 transition-all hover:scale-105 hover:border-neon-cyan/50 overflow-hidden p-4"
+                                >
+                                    <Image
+                                        src={sponsor.image}
+                                        alt={sponsor.name}
+                                        fill
+                                        className="object-contain p-4"
+                                    />
+                                </div>
+                            ))}
+                        </div>
+                    </Section>
                 </div>
 
                 <Section delay={0.6}>
